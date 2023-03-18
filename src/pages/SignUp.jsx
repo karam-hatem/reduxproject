@@ -116,8 +116,8 @@ export default function SignUp() {
         <div className="a-left">
         {/* <UilIntercom className="loginn" /> */}
             <div className="Webname">
-            <h1>The Bookshelf</h1>
-        <h6>Reading a good book three times does more good for you than reading three good books</h6>
+            <h1>The BookHouse</h1>
+        <h4>Reading a good book three times does more <br/>  good for you than reading three good books</h4>
         </div>
         </div>
         <div className="a-right">

@@ -20,7 +20,9 @@ export default function Books() {
       if(user){
         dispatch(authActions.login())
       }
+      // عشان يجيب البيانات من ملفات الباك اند
         BookService.getBook().then(function(res){
+
         setBook(res.data)
             console.log(res)
             // setReRender({render: true})
@@ -35,8 +37,13 @@ console.log(sr)
      <Search  sr={sr} setSr={setSr} />
      {/* <SingleBook /> */}
    
+
+
+{/* فلترت الكتب وعرضها في الصفحة الرئيسيه */}
+
+
 <div className='books_countaner'>
-      {book.filter(b=>b.title.toLowerCase().includes(sr)).map(e=>(
+      {book.filter(b=>b.title.toLowerCase().includes(sr.toLowerCase())).map(e=>(
         <Card key={e.id} style={{ width: '100%' }}>
         <Card.Img variant="top" style={{width:'35%' }} src={"http://localhost/library/backend/upload/"+e.book_img} />
         <Card.Body>

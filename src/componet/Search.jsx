@@ -18,8 +18,8 @@ export default function Search({ sr,setSr}) {
         {/* <p>Hello World</p> */}
 
         <div className='search_contunt'>
-            <h3>find your faverit book</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, eius! Similique voluptatibus a illo itaque ab ad iusto illum ipsam!</p>
+            <h3>Find your faverit book</h3>
+            <p>"A great book should leave you with many experiences, and slightly exhausted at the end. <br/>  You live several lives while reading." – William Styron</p>
             <input type="text" placeholder='Search Book ...' onChange={handelChange} />
         </div>
 

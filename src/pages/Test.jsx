@@ -4,14 +4,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import BookService from '../apis/BookService';
 import Header from '../componet/Header';
-
 import { authActions } from '../store/authSlice';
 import { FaBookOpen } from 'react-icons/fa';
 import { FaUserAlt } from 'react-icons/fa';
 import { GrMail } from "react-icons/gr";
-
-import './test.css'
-
 
 function Test() {
     // const user = useSelector(state=>state.isLoggedIn)
@@ -42,6 +38,9 @@ function Test() {
 
       const handleChange = (e)=>{
         const newData = { ...bookData }
+        // input [e.target.name]
+        // يعني المدخل يلي بتغير اعطيني اسمو
+        // واعطيني القسمه تبعتو
         newData[e.target.name] = e.target.value
         setBookData(newData)
         console.log(newData)
@@ -72,6 +71,8 @@ function Test() {
           console.log(res)
           // setReRender({render: true})
           // render data after create book
+
+          
           BookService.getUserBook({id:user.id}).then(function(res){
             setBook(res.data)
                 console.log(res)
@@ -106,7 +107,6 @@ function Test() {
   return (
     <div>
       <Header />
-
       <div style={{display:'flex'}}>
           <div className="left">
             <div className='info'>
@@ -143,48 +143,28 @@ function Test() {
                   onChange={handleChange}
                   name="title"
                   placeholder="title"
+                  required
               />
             </div>
             <div>
             <input
                 className='bookInput'
-
-      
-    <div className="profile">
-    <div className='userinfo'>
-      <h3>user name: {user.name}</h3>
-      <h3>user email: {user.email}</h3>
-    </div>
-    <form onSubmit={handelsubmit} >
-        <h1>create book</h1>
-        <div>
-            <input
-                type="text"
-                onChange={handleChange}
-                name="title"
-                placeholder="title"
-            />
-            <input
-
                 type="text"
                 onChange={handleChange}
                 name="author"
                 placeholder="author"
+                required
             />
-
             </div>
             <div>
             <input
                 className='bookInput'
-
-            <input
-
                 type="text"
                 onChange={handleChange}
                 name="description"
                 placeholder="description"
+                required
             />
-
             </div>
             <div>
                 Change Image
@@ -193,7 +173,6 @@ function Test() {
             <button type="submit" className='bookBtn' >create</button>
         </form>
       </div>
-
     </div>
   )
 }

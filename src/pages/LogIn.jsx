@@ -25,10 +25,12 @@
             console.log(res.data);
           } else {
 
-            console.log(res.data)
+            // console.log(res.data)
+
             localStorage.setItem('user', JSON.stringify(res.data))
             dispatch(authActions.login())
 
+            
             navigate("/books");
           }
         });
@@ -41,14 +43,14 @@
             {/* <UilIntercom className="loginn" /> */}
             {/* <img width={'400px'} src={"http://localhost/library/backend/upload/booklogo.png"} alt="" />  */}
             <div className="Webname">
-            <h1>The Bookshelf</h1>
-            <h6>Reading a good book three times does more good for you than reading three good books</h6>
+            <h1>The BookHouse</h1>
+            <h4>Reading a good book three times does more <br /> good for you than reading three good books</h4>
             </div>
         </div>
 
         <div className="a-right">
             <form onSubmit={handelsubmit} className="infoForm authForm">
-            <h3>Log In</h3>
+            <h3 className="Log">Log In</h3>
 
             <div>
                 <input

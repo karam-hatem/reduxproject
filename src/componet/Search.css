@@ -1,6 +1,6 @@
 .search_back{
-    background-color: yellow;
-    background-image: url('../img/library-img.jpg' ) ;
+    background-image: url('../img/gabriel-ghnassia-VmS8VQ0n39Q-unsplash.jpg' ) ;
+    background-position:bottom;
     background-repeat: no-repeat;
     background-size: cover;
     /* background-position: center; */
@@ -10,9 +10,14 @@
     align-items: center;
 }
 .search_contunt{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin-top: 28px;
+    
+}
+.search_contunt p{
     color: white;
-    font-size: 18px;
-
+    margin-top: 55px;
 }
 .search_contunt input{
     width: 400px;
@@ -21,6 +26,7 @@
     border: none;
     padding-right: 10px;
     padding-left: 10px;
+       
 }
 input:focus{
     outline: none;
